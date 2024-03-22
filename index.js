@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
     res.json("Hello, welcome to my website.");
 });
 
-app.get('/news', function (req, res) {
+app.get('/fests', function (req, res) {
     axios.get('https://www.knowafest.com/explore/state/Tamil-Nadu')
         .then(function (response) {
             const html = response.data;

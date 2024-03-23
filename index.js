@@ -3,8 +3,16 @@ const PORT = 3000;
 const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const cors = require('cors'); // Import the CORS middleware
+const bodyParser = require('body-parser'); // Import the body-parser middleware
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+
+// Parse incoming request bodies as JSON
+app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
     res.json("Hello, welcome to my website.");
